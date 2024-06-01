@@ -1,0 +1,50 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\KYE\\.ohos\\config\\default_undersky_TjZwaWqvm46RnYvviOMHerHZwsZUuMFtZIvgfwik1fs=.cer",
+          "storePassword": "0000001B5B6CDAF1F986BFA388EBB1CDE25856F933560B35951AB451A6704C303DA689720F1CF56614EAF8",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BC8D2011E67F3B50B77C441FF06A01E9C2C3B033530EBE4F39EBE984F678EECEDC31CD417A8C89C",
+          "profile": "C:\\Users\\KYE\\.ohos\\config\\default_undersky_TjZwaWqvm46RnYvviOMHerHZwsZUuMFtZIvgfwik1fs=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\KYE\\.ohos\\config\\default_undersky_TjZwaWqvm46RnYvviOMHerHZwsZUuMFtZIvgfwik1fs=.p12"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compileSdkVersion": "4.1.0(11)",
+        "compatibleSdkVersion": "4.1.0(11)",
+        "runtimeOS": "HarmonyOS",
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

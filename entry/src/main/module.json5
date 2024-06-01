@@ -1,0 +1,38 @@
+{
+  "module": {
+    "name": "entry",  //标识当前Module的名称，标签值采用字符串表示（最大长度31个字节），该名称在整个应用要唯一，仅支持英文字符。
+    "type": "entry",  //标识当前Module的类型
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet",
+      "2in1"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",  //标识当前Module所对应的代码路径，标签值为字符串（最长为127字节）。
+        "description": "$string:EntryAbility_desc",  //标识当前Module的描述信息，标签值是字符串类型（最长255字节）或对描述内容的字符串资源索引。
+        "icon": "$media:icon",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
