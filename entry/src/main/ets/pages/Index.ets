@@ -1,3 +1,5 @@
+import { router } from '@kit.ArkUI';
+
 @Entry
 @Component
 struct Index {
@@ -22,6 +24,13 @@ struct Index {
         .backgroundColor('#0D9FFB')
         .width('40%')
         .height('5%')
+        .onClick(() => {
+          console.info(`Succeeded in clicking the 'Next' button.`)
+          // 跳转到第二页
+          router.pushUrl({ url: 'pages/Second' }).then(() => {
+            console.info('Succeeded in jumping to the second page.')
+          })
+        })
 
       }
       .width('100%')
