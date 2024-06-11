@@ -6,9 +6,9 @@
         "type": "HarmonyOS",
         "material": {
           "certpath": "C:\\Users\\KYE\\.ohos\\config\\default_undersky_TjZwaWqvm46RnYvviOMHerHZwsZUuMFtZIvgfwik1fs=.cer",
-          "storePassword": "0000001B5B6CDAF1F986BFA388EBB1CDE25856F933560B35951AB451A6704C303DA689720F1CF56614EAF8",
+          "storePassword": "0000001BDCD96D45AD33F98217D57127943E459D21E21E2BFC0085F2EB070A559C369DA0C5348C104B2BB2",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001BC8D2011E67F3B50B77C441FF06A01E9C2C3B033530EBE4F39EBE984F678EECEDC31CD417A8C89C",
+          "keyPassword": "0000001B20A8EC2B85613CDA65E73E580966EF08584C84A3B93FE7DF758745EF125313CED9B2922A8D8F5B",
           "profile": "C:\\Users\\KYE\\.ohos\\config\\default_undersky_TjZwaWqvm46RnYvviOMHerHZwsZUuMFtZIvgfwik1fs=.p7b",
           "signAlg": "SHA256withECDSA",
           "storeFile": "C:\\Users\\KYE\\.ohos\\config\\default_undersky_TjZwaWqvm46RnYvviOMHerHZwsZUuMFtZIvgfwik1fs=.p12"
