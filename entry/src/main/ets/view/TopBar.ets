@@ -1,5 +1,5 @@
 /**
- * 顶部topbar
+ * 顶部topBar
  */
 import { router } from '@kit.ArkUI';
 
@@ -7,6 +7,8 @@ import { router } from '@kit.ArkUI';
 @Component
 export struct TopBar {
   private title?: string;
+  private rightText?: string;
+  private rightClick?: (value: string) => void;
 
   build() {
     Row() {
@@ -14,7 +16,6 @@ export struct TopBar {
         Image($r('app.media.ic_public_back'))
           .height(21)
           .width(21)
-          .margin({ right: 18 })
           .onClick(() => {
             console.info(`Succeeded in clicking the 'Back' button.`)
             try {
@@ -25,15 +26,39 @@ export struct TopBar {
               console.error(`Failed to return to the first page.Code is ${err.code}, message is ${err.message}`)
             }
           })
-        Text(this.title)
-          .fontSize(20)
       }
-      .width('100%')
+      .width('20%')
       .height('100%')
       .justifyContent(FlexAlign.Start)
+
+      Row() {
+        Text(this.title)
+          .fontWeight(FontWeight.Bold)
+          .fontSize(20)
+      }
+      .width('60%')
+      .height('100%')
+      .justifyContent(FlexAlign.Center)
+
+
+      Row() {
+        if (this.rightText) {
+          Text(this.rightText)
+            .fontSize(18)
+            .onClick(() => {
+              if (this.rightClick !== undefined) {
+                this.rightClick("rightText");
+              }
+            })
+        }
+      }
+      .width('20%')
+      .height('100%')
+      .justifyContent(FlexAlign.End)
+
     }
     .width('100%')
-    .padding({ left: 26, right: 26 })
+    .padding({ left: 16, right: 16 })
     .margin({ top: 10 })
     .height(48)
     .justifyContent(FlexAlign.SpaceAround)
