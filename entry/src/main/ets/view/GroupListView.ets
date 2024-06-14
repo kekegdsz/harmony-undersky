@@ -16,9 +16,16 @@ export struct GroupListView {
               index: (Number(index) + 1), name: item.name, callback: item.clickCallback
             })
           }
-          .padding({ left: 16, right: 16 })
           .height(48)
           .width('100%')
+          .stateStyles({
+            pressed: {
+              .backgroundColor("#f0f0f0")
+            },
+            normal: {
+              .backgroundColor(Color.White)
+            }
+          })
           .onClick((e) => {
 
           })

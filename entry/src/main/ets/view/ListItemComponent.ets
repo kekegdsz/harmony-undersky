@@ -14,7 +14,7 @@
  */
 
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { FontSize, ItemStyle, WEIGHT, FontWeight } from '../common/Constants';
+import { FontSize, FontWeight, WEIGHT } from '../common/Constants';
 
 @Component
 export struct ListItemComponent {
@@ -23,21 +23,23 @@ export struct ListItemComponent {
   callback?: () => void
 
   build() {
-    Row() {
-      Text(this.name)
-        .width(WEIGHT)
-        .alignSelf(ItemAlign.Center)
-        .fontWeight(FontWeight.BOLDER)
-        .fontSize(FontSize.MIDDLE)
-    }
-    .height(ItemStyle.BAR_HEIGHT)
-    .width(WEIGHT)
-    .justifyContent(FlexAlign.SpaceAround)
-    .onClick(() => {
-      hilog.info(0x0000, 'ListItemComponent', "name: " + this.name + ", callback: " + this.callback);
-      if (this.callback) {
-        this.callback()
+    Column() {
+      Column() {
+        Text(this.name)
+          .width(WEIGHT)
+          .fontWeight(FontWeight.BOLDER)
+          .fontSize(FontSize.MIDDLE)
       }
-    })
+      .width(WEIGHT)
+      .justifyContent(FlexAlign.SpaceAround)
+      .onClick(() => {
+        hilog.info(0x0000, 'ListItemComponent', "name: " + this.name + ", callback: " + this.callback);
+        if (this.callback) {
+          this.callback()
+        }
+      })
+
+    }
+    .padding({ left: 16, right: 16 })
   }
 }
