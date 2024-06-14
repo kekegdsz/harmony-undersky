@@ -9,23 +9,26 @@ export struct TopBar {
   private title?: string;
   private rightText?: string;
   private rightClick?: (value: string) => void;
+  private hasBack?: boolean = true;
 
   build() {
     Row() {
       Row() {
-        Image($r('app.media.ic_public_back'))
-          .height(21)
-          .width(21)
-          .onClick(() => {
-            console.info(`Succeeded in clicking the 'Back' button.`)
-            try {
-              // 返回第一页
-              router.back()
-              console.info('Succeeded in returning to the first page.')
-            } catch (err) {
-              console.error(`Failed to return to the first page.Code is ${err.code}, message is ${err.message}`)
-            }
-          })
+        if (this.hasBack) {
+          Image($r('app.media.ic_public_back'))
+            .height(21)
+            .width(21)
+            .onClick(() => {
+              console.info(`Succeeded in clicking the 'Back' button.`)
+              try {
+                // 返回第一页
+                router.back()
+                console.info('Succeeded in returning to the first page.')
+              } catch (err) {
+                console.error(`Failed to return to the first page.Code is ${err.code}, message is ${err.message}`)
+              }
+            })
+        }
       }
       .width('20%')
       .height('100%')

@@ -11,10 +11,10 @@ struct Index {
     Column() {
       TopBar({
         title: "harmony",
-        rightText: "设置",
         rightClick: (msg: string): void => {
           ToastUtil.showToast({ message: msg })
-        }
+        },
+        hasBack: false
       })
       GroupListView()
     }

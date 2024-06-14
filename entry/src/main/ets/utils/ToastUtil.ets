@@ -1,8 +1,4 @@
-/**
- * @Author zhuyingfa
- * @Date 2024/2/27
- * @Description
- */
+
 import promptAction from '@ohos.promptAction';
 import { BusinessError } from '@ohos.base';
 import display from '@ohos.display';
